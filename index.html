@@ -436,7 +436,7 @@
                 src="./images/bg-image.avif" alt="bg image">
             <div class="main__info__col">
                 <button class="main__info__col__btn">Bepul Qatnashish <img class="main__info__col__image"
-                        src="./images/Vector.avif" decoding="async" width="17" height="21"
+                        src="./images/Vector.avif" loading="lazy" decoding="async" width="17" height="21"
                         alt=""></button>
             </div>
         </div>
@@ -466,7 +466,7 @@
            </marquee>
         </div>
         <div class="info__main">
-            <img class="info__main__image" src="./images/price.avif" max-width="77" max-height="80" decoding="async" alt="prise image">
+            <img class="info__main__image" src="./images/price.avif" max-width="77" max-height="80" loading="lazy" decoding="async" alt="prise image">
             <div class="info__main__col">
                 <h3 class="info__main__col__title">maxsus sovg’a</h3>
                 <p class="info__main__col__text">Birinchi 10 ta xaridorlarimiz <br> uchun <span
@@ -478,7 +478,7 @@
 
         <div class="foot">
             <h2 class="foot__title">01
-                <img class="foot__image" decoding="async" src="./images/vektor.avif" width="17"
+                <img class="foot__image" loading="lazy" decoding="async" src="./images/vektor.avif" width="17"
                     height="17" alt="vector">
             </h2>
             <p class="foot__text"><span class="foot__text__span">Loyihaning to'liq taqdimoti.</span> Render, <br> reja,
@@ -486,7 +486,7 @@
         </div>
         <div class="foot">
             <h2 class="foot__title">02
-                <img class="foot__image" decoding="async" src="./images/vektor.avif" width="17"
+                <img class="foot__image" loading="lazy" decoding="async" src="./images/vektor.avif" width="17"
                     height="17" alt="vector">
             </h2>
             <p class="foot__text"><span class="foot__text__span">Bo'lib to'lash, boshlang'ich to'lov <br> miqdori,
@@ -495,7 +495,7 @@
         </div>
         <div class="foot">
             <h2 class="foot__title">03
-                <img class="foot__image" decoding="async" src="./images/vektor.avif" width="17"
+                <img class="foot__image" loading="lazy" decoding="async" src="./images/vektor.avif" width="17"
                     height="17" alt="vector">
             </h2>
             <p class="foot__text">Birinchi xaridorlarimiz uchun <br> <span class="foot__text__span">maishiy texnika
@@ -520,34 +520,7 @@
         </div>
     </div>
 
-    <script>
-        const countdownElement = document.getElementById('countdown');
-        const initialSeconds = 120;
-        let totalSeconds = initialSeconds;
-
-        function formatTime(value) {
-            return String(value).padStart(2, '0');
-        }
-
-        function updateCountdown() {
-            const hours = Math.floor(totalSeconds / 3600);
-            const minutes = Math.floor((totalSeconds % 3600) / 60);
-            const seconds = totalSeconds % 60;
-
-            countdownElement.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
-
-            if (totalSeconds <= 0) {
-                totalSeconds = initialSeconds;
-                return;
-            }
-
-            totalSeconds -= 1;
-        }
-
-        updateCountdown();
-        const timerInterval = setInterval(updateCountdown, 1000);
-    </script>
-
+    <script defer src="./js/countdown.js"></script>
     <script defer src="./js/modal.js"></script>
 
 </body>
