@@ -146,7 +146,6 @@
             display: flex;
             align-items: center;
             width: max-content;
-            animation: scrollTicker 14s linear infinite;
         }
 
         .main__animation__track {
@@ -173,11 +172,11 @@
             background-color: #03A7B2;
             border-radius: 50%;
             flex-shrink: 0;
+            padding-top: 14px;
+            padding-bottom: 10px;
         }
 
-      
-
-
+    
         .info__main {
             padding-left: 20px;
             padding-right: 19px;
@@ -440,7 +439,8 @@
             </div>
         </div>
         <div class="main__animation__wrapper">
-            <div class="main__animation">
+           <marquee behavior="right" direction="">
+             <div class="main__animation">
                 <div class="main__animation__track">
                     <h3 class="main__animation__title">joylar soni cheklangan</h3>
                     <div class="main__animation__box"></div>
@@ -461,6 +461,7 @@
                     <h3 class="main__animation__title">shoshiling</h3>
                 </div>
             </div>
+           </marquee>
         </div>
         <div class="info__main">
             <img class="info__main__image" src="./images/price.avif" max-width="77" max-height="80" loading="lazy"
