@@ -1,24 +1,19 @@
 const countdownElement = document.getElementById('countdown');
-const initialSeconds = 120;
+const initialSeconds = 120; // 2 minut
 let totalSeconds = initialSeconds;
 
-function formatTime(value) {
-    return String(value).padStart(2, '0');
-}
-
 function updateCountdown() {
-    const hours = Math.floor(totalSeconds / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
 
-    countdownElement.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+    countdownElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
     if (totalSeconds <= 0) {
         totalSeconds = initialSeconds;
         return;
     }
 
-    totalSeconds -= 1;
+    totalSeconds--;
 }
 
 updateCountdown();
