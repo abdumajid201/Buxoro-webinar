@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buxoro webinar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&display=swap"
-        rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -52,7 +49,7 @@
         .head__col__title {
             font-family: 'Bebas Neue', sans-serif;
             font-weight: 400;
-            font-size: clamp(38px, 9vw, 46px);
+            font-size: clamp(36px, 9vw, 46px);
             line-height: 110%;
             text-align: center;
             max-width: 390px;
@@ -62,7 +59,7 @@
 
         .head__col__title__span {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(38px, 9vw, 46px);
+            font-size: clamp(36px, 9vw, 46px);
             color: #03A7B2;
         }
 
@@ -80,17 +77,14 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 270px;
-            object-fit: cover;
-            border-radius: 20px;
             z-index: 1;
         }
 
         .main__info__position {
             position: absolute;
-            right: clamp(0px, 5vw, 40px);
-            top: -5px;
-            width: clamp(180px, 55%, 240px);
+            right: 20%;
+            top: -2px;
+            width: clamp(200px, 55%, 240px);
             height: 300px;
             object-fit: contain;
             object-position: bottom;
@@ -106,15 +100,15 @@
             backdrop-filter: blur(20px);
             background: rgba(255, 255, 255, 0.12);
             z-index: 10;
-            bottom: 0;
+            bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
             padding: clamp(10px, 4vw, 16px);
-            border-radius: 20px 20px 0 0;
+            border-radius: 20px;
         }
 
         .main__info__col__btn {
-            padding: clamp(14px, 4vw, 20px) clamp(10px, 4vw, 24px);
+            padding: clamp(16px, 4vw, 20px) clamp(10px, 4vw, 24px);
             width: 100%;
             box-shadow: 0px 4px 0px 0px #026A71;
             background: #03A7B2;
@@ -198,7 +192,6 @@
             flex-shrink: 0;
         }
 
-        /* INFO CARD */
         .info__main {
             padding: 11px 19px;
             display: flex;
@@ -214,6 +207,8 @@
         .info__main__image {
             display: flex;
             flex-shrink: 0;
+            max-width: 77px;
+            width: 100%;
         }
 
         .info__main__image img {
@@ -285,17 +280,22 @@
         }
 
         .foot__text {
-            font-family: Montserrat, sans-serif;
+            font-family: Montserrat , sans-serif;
             font-weight: 400;
-            font-size: 13px;
-            line-height: 145%;
+            font-size: clamp(14px, 4vw, 16px);
+            line-height: 150%;
+            vertical-align: middle;
+
+            max-width: 299px;
         }
 
         .foot__text__span {
             font-family: Montserrat, sans-serif;
             font-weight: 700;
-            font-size: 13px;
-            line-height: 145%;
+            font-size: clamp(14px, 4vw, 16px);
+            line-height: 150%;
+            vertical-align: middle;
+
         }
 
         /* BOTTOM BTN */
@@ -497,7 +497,7 @@
             <div class="info__main__col">
                 <h3 class="info__main__col__title">maxsus sovg'a</h3>
                 <p class="info__main__col__text">
-                    Birinchi 10 ta xaridorlarimiz uchun <br>
+                    Birinchi 10 ta xaridorlarimiz uchun
                     <span class="info__main__col__span">6 000$ real chegirma!</span>
                 </p>
             </div>
@@ -537,7 +537,7 @@
             </h2>
             <p class="foot__text">
                 Birinchi xaridorlarimiz uchun
-                <span class="foot__text__span">maishiy texnika to'plamlarini sovg'a</span>
+                <span class="foot__text__span">maishiy texnika to'plamlarini <br> sovg'a</span>
                 qilamiz
             </p>
         </div>
